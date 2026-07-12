@@ -1,13 +1,19 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { pageMetadata } from "@/lib/seo";
 import styles from "./about.module.css";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "The Studio",
   description:
     "ARV is a two-person studio in Sydney — architect Richard Lovell and maker Tom Glover — building solid oak tables for clients around the world.",
-};
+  image: {
+    url: "/site/about-workshop.jpg",
+    width: 2400,
+    height: 1170,
+    alt: "Richard Lovell and Tom Glover in the ARV workshop",
+  },
+});
 
 const FACTS = [
   { value: "2", label: "Founders, one studio" },

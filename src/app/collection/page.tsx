@@ -1,14 +1,20 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { commerce, CATEGORIES, type Category } from "@/lib/commerce";
+import { pageMetadata } from "@/lib/seo";
 import { ProductCard } from "@/components/product/ProductCard";
 import styles from "./collection.module.css";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "The Collection",
   description:
     "Every piece in the ARV catalogue — dining, coffee and side tables, hand-built from solid oak by a two-person studio in Sydney.",
-};
+  image: {
+    url: "/products/iggy-dining-table-1.jpg",
+    width: 1600,
+    height: 2000,
+    alt: "Iggy Oval Dining Table",
+  },
+});
 
 const FILTERS: { value: Category | "all"; label: string }[] = [
   { value: "all", label: "All" },

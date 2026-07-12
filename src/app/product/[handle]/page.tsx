@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { commerce } from "@/lib/commerce";
+import { pageMetadata } from "@/lib/seo";
 import { ProductForm } from "@/components/product/ProductForm";
 import styles from "./product.module.css";
 
@@ -20,10 +21,16 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   const product = await commerce.getProduct(handle);
   if (!product) return {};
 
-  return {
+  return pageMetadata({
     title: product.title,
     description: product.description,
-  };
+    image: {
+      url: product.featuredImage.url,
+      width: product.featuredImage.width,
+      height: product.featuredImage.height,
+      alt: product.featuredImage.altText,
+    },
+  });
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
