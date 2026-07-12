@@ -1,0 +1,79 @@
+:root {
+  /* ---- Palette: warm gallery light-luxury ---- */
+  --color-bone: oklch(97.5% 0.007 84);
+  --color-oat: oklch(94.5% 0.013 84);
+  --color-linen: oklch(91% 0.018 82);
+  --color-ink: oklch(23% 0.012 65);
+  --color-ink-soft: oklch(38% 0.014 65);
+  --color-ink-faint: oklch(55% 0.014 70);
+  --color-walnut: oklch(37% 0.052 52);
+  --color-brass: oklch(66% 0.095 82);
+  --color-brass-deep: oklch(56% 0.1 78);
+
+  /* Semantic */
+  --color-surface: var(--color-bone);
+  --color-surface-raised: oklch(99% 0.004 84);
+  --color-surface-sunken: var(--color-oat);
+  --color-text: var(--color-ink);
+  --color-text-secondary: var(--color-ink-soft);
+  --color-text-tertiary: var(--color-ink-faint);
+  --color-accent: var(--color-brass-deep);
+  --color-material: var(--color-walnut);
+  --color-line: oklch(85% 0.014 82);
+  --color-line-strong: oklch(70% 0.016 75);
+  --color-inverse-surface: var(--color-ink);
+  --color-inverse-text: var(--color-bone);
+  --color-error: oklch(52% 0.16 28);
+
+  /* ---- Typography scale ---- */
+  --font-display: var(--font-fraunces), "Fraunces", georgia, serif;
+  --font-sans: var(--font-instrument), "Instrument Sans", system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: clamp(1rem, 0.94rem + 0.3vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  --text-xl: clamp(1.375rem, 1.1rem + 1vw, 1.875rem);
+  --text-2xl: clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem);
+  --text-3xl: clamp(2.25rem, 1.5rem + 3vw, 4rem);
+  --text-hero: clamp(3rem, 1rem + 7vw, 8rem);
+  --text-mega: clamp(4.5rem, 1rem + 16vw, 18rem);
+
+  --leading-tight: 1.04;
+  --leading-snug: 1.2;
+  --leading-normal: 1.55;
+
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.14em;
+
+  /* ---- Spacing rhythm ---- */
+  --space-2xs: 0.375rem;
+  --space-xs: 0.625rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+  --space-xl: clamp(4rem, 3rem + 4vw, 7rem);
+  --space-section: clamp(5rem, 3rem + 8vw, 12rem);
+
+  --gutter: clamp(1.25rem, 0.5rem + 3vw, 4rem);
+  --max-width: 100rem;
+
+  /* ---- Motion ---- */
+  --duration-fast: 180ms;
+  --duration-normal: 400ms;
+  --duration-slow: 800ms;
+  --duration-reveal: 1100ms;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+
+  /* ---- Depth ---- */
+  --shadow-soft: 0 1px 2px oklch(23% 0.012 65 / 0.05), 0 8px 24px oklch(23% 0.012 65 / 0.06);
+  --shadow-lifted: 0 2px 4px oklch(23% 0.012 65 / 0.06), 0 20px 48px oklch(23% 0.012 65 / 0.12);
+
+  /* ---- Z layers ---- */
+  --z-header: 100;
+  --z-transition: 200;
+  --z-drawer: 300;
+}

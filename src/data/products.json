@@ -1,0 +1,140 @@
+{
+  "currencyCode": "DKK",
+  "priceModifiers": {
+    "Smoked Oak": 2400,
+    "Matte Lacquer": 400,
+    "220 cm": 4200,
+    "240 cm": 4800,
+    "130 cm": 2600
+  },
+  "products": [
+    {
+      "handle": "iggy-dining-table",
+      "title": "Iggy Oval Dining Table",
+      "category": "dining",
+      "featured": true,
+      "basePrice": 29800,
+      "description": "An oval dining table carried on two slatted pedestal columns, so no one ever sits against a leg. The top is a single glued panel of solid oak, shaped until the ellipse reads as one calm line.",
+      "story": "Iggy began as a question: how many chairs fit around a table with no corners? The answer, at the last count, was eleven — nine seated, two leaning in to argue.",
+      "details": [
+        "Solid oak top, 40 mm, full-stave glued panel",
+        "Twin pedestal bases of vertical oak slats",
+        "Seats eight without touching a knee to wood",
+        "Finished with hardwax oil, repairable in place"
+      ],
+      "dimensions": "L 200/240 · W 100 · H 75 cm",
+      "options": [
+        { "name": "Finish", "values": ["Natural Oil", "Smoked Oak"] },
+        { "name": "Length", "values": ["200 cm", "240 cm"] }
+      ]
+    },
+    {
+      "handle": "steve-coffee-table",
+      "title": "Steve Coffee Table",
+      "category": "coffee",
+      "featured": true,
+      "basePrice": 8900,
+      "description": "A rectangular coffee table of uncompromising simplicity: a thick oak slab resting on two plank legs, joined so cleanly the eye keeps looking for the fixings. There are none to find.",
+      "story": "Steve is the piece we hand apprentices first. Three boards, two joints, nowhere to hide. When their Steve is right, they are allowed near everything else.",
+      "details": [
+        "Solid oak throughout, 38 mm boards",
+        "Plank legs housed in concealed sliding dovetails",
+        "Edges eased by hand, never routed",
+        "Grain matched across top and legs from one log"
+      ],
+      "dimensions": "L 110 · W 60 · H 40 cm",
+      "options": [{ "name": "Finish", "values": ["Natural Oil", "Matte Lacquer"] }]
+    },
+    {
+      "handle": "duo-coffee-table",
+      "title": "Duo Tiered Coffee Table",
+      "category": "coffee",
+      "featured": true,
+      "basePrice": 9800,
+      "description": "A two-level coffee table with an offset lower shelf — one plane for the life of the room, a second for the books and unfinished arguments that would otherwise cover it.",
+      "story": "Duo exists because Astrid kept losing her reading glasses under the newspaper. The lower tier is precisely one folded broadsheet deep. That is not a coincidence.",
+      "details": [
+        "Two solid oak planes, offset in overlap",
+        "Shelf carried on through-wedged battens",
+        "Underside finished as carefully as the top",
+        "Sized for sofas of ordinary ambition"
+      ],
+      "dimensions": "L 100 · W 55 · H 42 cm",
+      "options": [{ "name": "Finish", "values": ["Natural Oil", "Matte Lacquer"] }]
+    },
+    {
+      "handle": "otto-pedestal-table",
+      "title": "Otto Pedestal Table",
+      "category": "dining",
+      "featured": true,
+      "basePrice": 24500,
+      "description": "A round table on a single slatted column, sized for four people and one candle. The pedestal's vertical oak staves catch light like a curtain caught mid-fold.",
+      "story": "Otto is the workshop's answer to small Copenhagen kitchens: a table with no legs to bark a shin on and no bad seat. The column is thirty-one staves; the thirty-second is on the wall, signed by whoever counted wrong.",
+      "details": [
+        "Round solid oak top, 36 mm",
+        "Pedestal of vertical staves over a steel core",
+        "Weighted base plate hidden in the plinth",
+        "Comfortable for four, intimate for two"
+      ],
+      "dimensions": "Ø 110/130 · H 75 cm",
+      "options": [
+        { "name": "Finish", "values": ["Natural Oil", "Smoked Oak"] },
+        { "name": "Diameter", "values": ["110 cm", "130 cm"] }
+      ]
+    },
+    {
+      "handle": "rollo-dining-table",
+      "title": "Rollo Dining Table",
+      "category": "dining",
+      "featured": true,
+      "basePrice": 26500,
+      "description": "A massive oak dining table on four turned cylindrical legs, planted at the corners like it intends to stay for the century. The top is fifty millimetres of slow-dried oak with a hand-eased edge.",
+      "story": "Rollo is named for the roll of the gouge that turns its legs — one long cut per leg, no sandpaper until the last minute. Knock a knuckle on the top and the whole table answers.",
+      "details": [
+        "Solid oak top, 50 mm full-stave panel",
+        "Turned cylinder legs, wedged through the top",
+        "No aprons — knees go where they please",
+        "Ages to a deep honey patina under daily use"
+      ],
+      "dimensions": "L 180/220 · W 95 · H 75 cm",
+      "options": [
+        { "name": "Finish", "values": ["Natural Oil", "Smoked Oak"] },
+        { "name": "Length", "values": ["180 cm", "220 cm"] }
+      ]
+    },
+    {
+      "handle": "rollo-coffee-set",
+      "title": "Rollo Coffee Table Set",
+      "category": "coffee",
+      "featured": false,
+      "basePrice": 11400,
+      "description": "The dining table's offspring: a nesting pair of low tables on the same turned legs, one long, one square. Together they hold a living room; apart they follow the conversation around it.",
+      "story": "The set exists because offcuts of fifty-millimetre oak are too good to burn and too heavy to argue with. Two tables from one board — the grain runs from the long table straight into the square one.",
+      "details": [
+        "Two tables: long and square, from one board",
+        "Turned legs matched to the Rollo dining table",
+        "Nest together to the footprint of the larger",
+        "Grain continues across both tops"
+      ],
+      "dimensions": "L 90 × 50 × H 40 cm · 50 × 50 × H 45 cm",
+      "options": [{ "name": "Finish", "values": ["Natural Oil", "Matte Lacquer"] }]
+    },
+    {
+      "handle": "sam-side-table",
+      "title": "Sam Side Table",
+      "category": "side",
+      "featured": false,
+      "basePrice": 4800,
+      "description": "A three-legged side table with a gently domed round top, standing steady on floors that have been settling since the last king but three. Sized for a lamp, a coffee, and one open book.",
+      "story": "Sam is the smallest thing we make and the hardest to keep in stock. Three legs, because Copenhagen floors lean; a rounded top, because everything on a side table eventually gets knocked — better it lands on the rug.",
+      "details": [
+        "Solid oak top with hand-rounded edge",
+        "Three splayed legs, wedged tenons",
+        "Tripod stance never rocks",
+        "Light enough to carry with one finger through a book"
+      ],
+      "dimensions": "Ø 40 · H 45 cm",
+      "options": [{ "name": "Finish", "values": ["Natural Oil", "Matte Lacquer"] }]
+    }
+  ]
+}

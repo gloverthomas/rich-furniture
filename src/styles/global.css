@@ -1,0 +1,198 @@
+@import "./tokens.css";
+@import "./typography.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100dvh;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-walnut);
+  color: var(--color-bone);
+}
+
+/* Layout primitives */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.full-bleed {
+  width: 100%;
+}
+
+/* Skip link */
+.skip-link {
+  position: fixed;
+  top: var(--space-xs);
+  left: var(--space-xs);
+  z-index: calc(var(--z-drawer) + 1);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--color-inverse-surface);
+  color: var(--color-inverse-text);
+  font-size: var(--text-sm);
+  transform: translateY(-200%);
+  transition: transform var(--duration-fast) var(--ease-out-quart);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* Text link with drawn underline */
+.text-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.text-link::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(1);
+  transform-origin: left center;
+  transition: transform var(--duration-normal) var(--ease-out-expo);
+}
+
+@media (hover: hover) {
+  .text-link:hover::after {
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+}
+
+/* Reveal primitives — animated by GSAP, safe defaults without JS */
+.reveal-line {
+  display: block;
+  overflow: clip;
+}
+
+.reveal-line > span {
+  display: block;
+  will-change: transform;
+}
+
+/* Route transition: ink veil sweeps up, content rises beneath it.
+   Lives in a route template so it replays on every navigation. */
+.page-veil {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-transition);
+  background: var(--color-inverse-surface);
+  pointer-events: none;
+  transform-origin: top center;
+  animation: veil-up 0.9s var(--ease-in-out-quart) 0.05s forwards;
+}
+
+.page-enter {
+  animation: page-rise 0.8s var(--ease-out-expo) 0.35s both;
+}
+
+@keyframes veil-up {
+  to {
+    transform: translateY(-101%);
+  }
+}
+
+@keyframes page-rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-veil {
+    display: none;
+  }
+
+  .page-enter {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

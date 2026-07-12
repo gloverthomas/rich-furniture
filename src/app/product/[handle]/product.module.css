@@ -1,0 +1,126 @@
+.page {
+  padding-top: calc(var(--space-lg) + 4rem);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.gallery {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.frame {
+  overflow: clip;
+  background: var(--color-surface-sunken);
+}
+
+/* Detail shot steps inward — editorial, not a stacked feed */
+.detailFrame {
+  width: 78%;
+  margin-left: auto;
+}
+
+.info {
+  position: sticky;
+  top: 0;
+  align-self: start;
+}
+
+.infoInner {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  display: grid;
+  gap: var(--space-md);
+}
+
+.breadcrumb {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  display: flex;
+  gap: var(--space-2xs);
+}
+
+.title {
+  font-size: var(--text-2xl);
+}
+
+.description {
+  color: var(--color-text-secondary);
+  max-width: 46ch;
+}
+
+.specs {
+  display: grid;
+  gap: var(--space-md);
+  border-top: 1px solid var(--color-line);
+  padding-top: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.specRow {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: var(--space-sm);
+}
+
+.detailList {
+  display: grid;
+  gap: var(--space-2xs);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.provenance {
+  background: var(--color-surface-sunken);
+  margin-top: var(--space-section);
+}
+
+.provenanceInner {
+  padding-block: var(--space-xl);
+  display: grid;
+  gap: var(--space-md);
+  justify-items: start;
+}
+
+.story {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 380;
+  font-style: italic;
+  line-height: 1.4;
+  max-width: 40ch;
+  text-wrap: balance;
+}
+
+.provenanceLink {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .info {
+    position: static;
+  }
+
+  .infoInner {
+    padding-top: 0;
+  }
+
+  .detailFrame {
+    width: 100%;
+  }
+}

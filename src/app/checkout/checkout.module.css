@@ -1,0 +1,50 @@
+.page {
+  padding-top: calc(var(--space-xl) + 4rem);
+  padding-bottom: var(--space-section);
+  display: grid;
+  gap: var(--space-md);
+  max-width: 52rem;
+}
+
+.heading {
+  max-width: 18ch;
+}
+
+.body {
+  color: var(--color-text-secondary);
+  max-width: 52ch;
+}
+
+.body code {
+  font-size: 0.9em;
+  background: var(--color-surface-sunken);
+  padding: 0.1em 0.4em;
+}
+
+.summary {
+  margin-top: var(--space-md);
+  border-top: 1px solid var(--color-line);
+  display: grid;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-block: var(--space-sm);
+  border-bottom: 1px solid var(--color-line);
+  font-size: var(--text-sm);
+}
+
+.variant {
+  color: var(--color-text-tertiary);
+}
+
+.total {
+  font-weight: 500;
+  font-size: var(--text-base);
+}
+
+.action {
+  margin-top: var(--space-md);
+}

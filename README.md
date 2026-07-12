@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ARV — Danish furniture, made to be inherited
 
-## Getting Started
+An immersive ecommerce site for a third-generation Copenhagen joinery selling
+solid-oak tables — seven pieces across dining, coffee and side tables.
+Editorial light-luxury design, cinematic scroll animation, and a commerce layer
+shaped like the Shopify Storefront API so real Shopify can be dropped in later.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router, TypeScript, CSS Modules — no UI framework)
+- **GSAP + ScrollTrigger + SplitText** for scroll-driven motion, **Lenis** for smooth scroll
+- **Fraunces** (display serif) + **Instrument Sans** via `next/font`
+- **Mock commerce provider** with a local catalog and cookie-backed cart
+- **Vitest** (unit) + **Playwright** (E2E, screenshots, reduced-motion checks)
+
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Other scripts:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build      # production build (static + SSG product pages)
+npm test           # vitest unit tests (commerce provider, money formatting)
+npx playwright test e2e/shop-flow.spec.ts    # E2E cart flow + reduced motion
+npx playwright test e2e/screenshots.spec.ts  # screenshots at 320/768/1024/1440 + overflow checks
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Architecture notes
 
-## Learn More
+- `src/lib/commerce/types.ts` mirrors Shopify Storefront API objects
+  (`MoneyV2`, `ProductVariant`, `Cart`). Editorial fields (story, details,
+  dimensions) map to Shopify metafields.
+- `src/lib/commerce/index.ts` selects the provider via `COMMERCE_PROVIDER`
+  (only `mock` exists today). A `ShopifyProvider` implements the same three
+  methods with GraphQL and swaps the cart cookie from serialized lines to a
+  Shopify cart id, with checkout going to the real `cart.checkoutUrl`.
+- All motion lives in `src/components/layout/AnimationOrchestrator.tsx`,
+  driven by `data-*` attributes; GSAP and Lenis are dynamically imported and
+  fully disabled under `prefers-reduced-motion`. Pages render complete
+  without JavaScript.
+- Route transitions are a CSS-only ink veil in `src/app/template.tsx`.
 
-To learn more about Next.js, take a look at the following resources:
+## Going live checklist
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Create a Shopify store + Storefront API access token.
+2. Implement `ShopifyProvider` against `src/lib/commerce/provider.ts`.
+3. Replace the remaining Unsplash site imagery (`public/site/`) with brand
+   photography — product images are already the real catalogue.
+4. `vercel deploy` — no config needed.

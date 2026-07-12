@@ -1,0 +1,106 @@
+.section {
+  background: var(--color-surface-sunken);
+  padding-block: var(--space-section);
+}
+
+.header {
+  display: grid;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.header h2 {
+  max-width: 16ch;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.visualColumn {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+}
+
+.visualStack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 82svh;
+  overflow: clip;
+}
+
+.visual {
+  position: absolute;
+  inset: 0;
+}
+
+/* First chapter visible by default; GSAP crossfades the rest */
+.visual:not(:first-child) {
+  opacity: 0;
+}
+
+.visualImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chapters {
+  display: grid;
+  gap: var(--space-section);
+  padding-block: calc(50svh - 8rem);
+}
+
+.chapter {
+  max-width: 32rem;
+}
+
+.index {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 340;
+  color: var(--color-line-strong);
+  margin-bottom: var(--space-sm);
+}
+
+.chapterTitle {
+  margin-top: var(--space-xs);
+  max-width: 14ch;
+}
+
+.chapterBody {
+  margin-top: var(--space-md);
+  color: var(--color-text-secondary);
+}
+
+.mobileVisual {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .visualColumn {
+    display: none;
+  }
+
+  .chapters {
+    padding-block: 0;
+    gap: var(--space-xl);
+  }
+
+  .mobileVisual {
+    display: block;
+    margin-bottom: var(--space-md);
+  }
+}
