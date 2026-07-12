@@ -21,7 +21,7 @@ const CHAPTERS = [
     eyebrow: "The surface",
     title: "Finished with oil, time and use.",
     body: "Cold-pressed linseed oil, beeswax, and nothing else. No lacquer film to scratch and cloud. The surface is the wood itself — it darkens, polishes under hands, and takes on the record of your household. In thirty years it will look better than today.",
-    image: { src: "/site/craft-finish.jpg", alt: "A carpenter working a plank at the bench" },
+    image: { src: "/site/craft-finish.jpg", alt: "Richard Lovell and Tom Glover in the ARV workshop" },
   },
 ] as const;
 

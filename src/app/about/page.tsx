@@ -59,8 +59,8 @@ export default function AboutPage() {
         <Image
           src="/site/about-workshop.jpg"
           alt="Richard Lovell and Tom Glover in the ARV workshop"
-          width={1400}
-          height={1750}
+          width={2400}
+          height={1170}
           sizes="100vw"
           className={styles.workshopImg}
         />

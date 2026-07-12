@@ -18,13 +18,13 @@
 
 .workshopImage {
   overflow: clip;
-  max-height: 70svh;
+  max-height: 92svh;
 }
 
 .workshopImg {
   width: 100%;
   object-fit: cover;
-  max-height: 70svh;
+  max-height: 92svh;
 }
 
 .history {
