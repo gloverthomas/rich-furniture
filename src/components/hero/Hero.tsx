@@ -8,7 +8,7 @@ export function Hero() {
       <div className={styles.media} data-hero-media>
         <Image
           src="/site/hero.jpg"
-          alt="A calm Copenhagen living room furnished with ARV pieces in oak and wool"
+          alt="A calm living room furnished with ARV solid oak tables"
           width={2400}
           height={1400}
           priority
@@ -21,7 +21,7 @@ export function Hero() {
 
       <div className={`container ${styles.content}`}>
         <p className={`type-eyebrow ${styles.eyebrow}`} data-hero-eyebrow>
-          Snedkeri ARV · København · Est. 1962
+          ARV Studio · Sydney, Australia
         </p>
         <h1 id="hero-heading" className={`type-hero ${styles.heading}`}>
           <span className="reveal-line">

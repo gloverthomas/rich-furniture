@@ -7,7 +7,7 @@ export function EditorialBreak() {
       <div className={styles.media} data-parallax>
         <Image
           src="/site/editorial-1.jpg"
-          alt="Morning light across a quiet Scandinavian living room"
+          alt="Morning light across a quiet living room"
           width={2400}
           height={1400}
           sizes="100vw"
@@ -20,7 +20,7 @@ export function EditorialBreak() {
           &ldquo;A table should stand the way the tree once stood — without ever thinking
           about it.&rdquo;
         </p>
-        <cite className={`type-eyebrow ${styles.cite}`}>Jørgen Arv-Nielsen, founder · 1962</cite>
+        <cite className={`type-eyebrow ${styles.cite}`}>Richard Lovell &amp; Tom Glover, ARV Studio</cite>
       </blockquote>
     </section>
   );

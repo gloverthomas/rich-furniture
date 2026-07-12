@@ -63,9 +63,9 @@ export function Footer() {
             <em>It is inherited.</em>
           </p>
           <p className={`type-small ${styles.address}`}>
-            Snedkeri ARV · Værkstedsvej 14
+            ARV Studio · Sydney, Australia
             <br />
-            1432 København K, Danmark
+            Shipping worldwide
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export function Footer() {
           ARV
         </span>
         <p className={`type-small ${styles.legal}`}>
-          © {new Date().getFullYear()} Snedkeri ARV. Est. 1962.
+          © {new Date().getFullYear()} ARV Studio.
         </p>
       </div>
     </footer>

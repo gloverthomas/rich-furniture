@@ -1,9 +1,10 @@
-# ARV — Danish furniture, made to be inherited
+# ARV — Solid oak tables, made to be inherited
 
-An immersive ecommerce site for a third-generation Copenhagen joinery selling
-solid-oak tables — seven pieces across dining, coffee and side tables.
-Editorial light-luxury design, cinematic scroll animation, and a commerce layer
-shaped like the Shopify Storefront API so real Shopify can be dropped in later.
+An immersive ecommerce site for ARV, a two-person Sydney studio (architect
+Richard Lovell and maker Tom Glover) selling solid-oak tables — seven pieces
+across dining, coffee and side tables. Editorial light-luxury design,
+cinematic scroll animation, and a commerce layer shaped like the Shopify
+Storefront API so real Shopify can be dropped in later.
 
 ## Stack
 

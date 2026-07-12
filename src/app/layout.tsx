@@ -21,13 +21,32 @@ const instrumentSans = Instrument_Sans({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const title = "ARV — Solid oak tables, made to be inherited";
+const description =
+  "ARV is a two-person studio in Sydney — architect Richard Lovell and maker Tom Glover — building solid oak dining, coffee and side tables for clients around the world.";
+
 export const metadata: Metadata = {
+  ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
   title: {
-    default: "ARV — Danish furniture, made to be inherited",
+    default: title,
     template: "%s — ARV",
   },
-  description:
-    "Hand-crafted Danish furniture from a third-generation workshop in Copenhagen. Solid wood, honest joinery, pieces made to outlive you.",
+  description,
+  openGraph: {
+    title,
+    description,
+    siteName: "ARV",
+    locale: "en_AU",
+    type: "website",
+    images: [{ url: "/site/hero.jpg", width: 2400, height: 1400 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/site/hero.jpg"],
+  },
 };
 
 export default function RootLayout({

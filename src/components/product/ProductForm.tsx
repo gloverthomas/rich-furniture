@@ -69,7 +69,7 @@ export function ProductForm({ product }: ProductFormProps) {
           {isPending ? "Adding…" : "Add to cart"}
         </Button>
         <p className={`type-small ${styles.leadTime}`}>
-          Built to order in Copenhagen · 6–10 weeks
+          Built to order in Sydney · 6–10 weeks
         </p>
       </div>
 

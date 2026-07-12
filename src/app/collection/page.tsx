@@ -7,7 +7,7 @@ import styles from "./collection.module.css";
 export const metadata: Metadata = {
   title: "The Collection",
   description:
-    "Every piece in the ARV catalogue — seating, tables, lighting and storage, hand-built in Copenhagen from slow-dried hardwood.",
+    "Every piece in the ARV catalogue — dining, coffee and side tables, hand-built from solid oak by a two-person studio in Sydney.",
 };
 
 const FILTERS: { value: Category | "all"; label: string }[] = [
@@ -39,7 +39,7 @@ export default async function CollectionPage({ searchParams }: CollectionPagePro
           </span>
         </h1>
         <p className={`type-lede ${styles.lede}`}>
-          {products.length} pieces, each built to order in Christianshavn. Lead time six to ten
+          {products.length} pieces, each built to order in Sydney. Lead time six to ten
           weeks — a piece of furniture should take longer than a season.
         </p>
       </header>

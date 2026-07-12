@@ -38,7 +38,7 @@ function productImages(raw: RawProduct): CommerceImage[] {
   return [
     {
       url: `/products/${raw.handle}-1.jpg`,
-      altText: `${raw.title} in a Copenhagen interior`,
+      altText: `${raw.title} in a Sydney interior`,
       width: 1600,
       height: 2000,
     },

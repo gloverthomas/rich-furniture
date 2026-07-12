@@ -11,12 +11,12 @@ export function Manifesto() {
       </h2>
       <div className={styles.aside}>
         <p className="type-body">
-          ARV is the Danish word for inheritance. Since 1962 our workshop in Christianshavn has
-          built oak tables for one buyer and two generations of strangers — the people who will
-          own each piece after you.
+          ARV is the Danish word for inheritance. The studio is two people — architect Richard
+          Lovell and maker Tom Glover — building solid oak tables in Sydney for clients around
+          the world.
         </p>
         <Link href="/about" className={`${styles.link} text-link`}>
-          Read the workshop&apos;s story
+          Read the studio&apos;s story
         </Link>
       </div>
     </section>

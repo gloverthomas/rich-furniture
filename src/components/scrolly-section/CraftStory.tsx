@@ -6,15 +6,15 @@ const CHAPTERS = [
     index: "01",
     eyebrow: "The tree",
     title: "We can name the forest.",
-    body: "Every plank in the workshop is Danish or Baltic hardwood, bought as whole logs from foresters we have worked with for decades. The logs are sawn, stickered and air-dried in our own yard for three years before a single cut is made. Slow wood moves less. Slow wood lasts.",
-    image: { src: "/site/craft-wood.jpg", alt: "Stacked oak timber air-drying in the workshop yard" },
+    body: "Every plank starts life as a whole log, chosen and sawn before it ever reaches the workshop. We stack, sticker and air-dry it ourselves before a single cut is made. Slow wood moves less. Slow wood lasts.",
+    image: { src: "/site/craft-wood.jpg", alt: "Richard sourcing timber in the workshop" },
   },
   {
     index: "02",
     eyebrow: "The joint",
     title: "No screw where a joint will do.",
     body: "Wedged through-tenons, hand-cut dovetails, tusk tenons that knock apart and move house with you. Metal fixings work loose over decades; wood locked into wood only tightens. Our joints are the ornament — there is no other decoration in the catalogue.",
-    image: { src: "/site/craft-joinery.jpg", alt: "A joiner's hands holding fresh oak shavings" },
+    image: { src: "/site/craft-joinery.jpg", alt: "Tom shaping a piece by hand in the workshop" },
   },
   {
     index: "03",
@@ -31,7 +31,7 @@ export function CraftStory() {
       <header className={`container ${styles.header}`}>
         <p className="type-eyebrow">The method</p>
         <h2 id="craft-heading" className="type-display">
-          Three generations. <em>One standard.</em>
+          An architect and a maker. <em>One standard.</em>
         </h2>
       </header>
 

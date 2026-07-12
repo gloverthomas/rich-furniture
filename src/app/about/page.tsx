@@ -4,23 +4,23 @@ import { Button } from "@/components/ui/Button";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = {
-  title: "The Workshop",
+  title: "The Studio",
   description:
-    "Snedkeri ARV is a third-generation joinery in Christianshavn, Copenhagen. Slow-dried hardwood, hand-cut joints, furniture built to be inherited.",
+    "ARV is a two-person studio in Sydney — architect Richard Lovell and maker Tom Glover — building solid oak tables for clients around the world.",
 };
 
 const FACTS = [
-  { value: "1962", label: "Founded on Værkstedsvej" },
-  { value: "3", label: "Generations of joiners" },
-  { value: "14", label: "Hands in the workshop" },
-  { value: "3 yrs", label: "Every plank air-dried" },
+  { value: "2", label: "Founders, one studio" },
+  { value: "Sydney", label: "Where every piece is made" },
+  { value: "Worldwide", label: "Where every piece ships" },
+  { value: "100%", label: "Solid oak, every time" },
 ] as const;
 
 const MATERIALS = [
   {
     image: "/site/craft-wood.jpg",
     title: "Slow wood",
-    body: "Oak, ash and walnut bought as whole logs and dried in our own yard. We reject nine of every ten logs we are offered.",
+    body: "Solid oak, bought as whole logs and air-dried before a single cut is made. We're particular about what makes it into the workshop.",
   },
   {
     image: "/site/craft-joinery.jpg",
@@ -38,27 +38,27 @@ export default function AboutPage() {
   return (
     <div className={styles.page}>
       <header className={`container ${styles.hero}`}>
-        <p className="type-eyebrow">The workshop</p>
+        <p className="type-eyebrow">The studio</p>
         <h1 className={`type-hero ${styles.heading}`}>
           <span className="reveal-line">
-            <span>Three generations</span>
+            <span>An architect</span>
           </span>
           <span className="reveal-line">
             <span>
-              of <em>stubbornness.</em>
+              and a <em>maker.</em>
             </span>
           </span>
         </h1>
         <p className={`type-lede ${styles.lede}`}>
-          Snedkeri ARV has occupied the same workshop in Christianshavn since 1962. The machines
-          have changed twice. The standard has not changed at all.
+          ARV is run by two people out of a Sydney workshop: an architect and a maker, building
+          solid oak tables for clients who mostly never see the workshop in person.
         </p>
       </header>
 
       <div className={styles.workshopImage} data-parallax>
         <Image
           src="/site/about-workshop.jpg"
-          alt="An Otto pedestal table styled in a Copenhagen living room"
+          alt="Richard Lovell and Tom Glover in the ARV workshop"
           width={1400}
           height={1750}
           sizes="100vw"
@@ -68,21 +68,20 @@ export default function AboutPage() {
 
       <section className={`container ${styles.history}`} aria-labelledby="history-heading">
         <h2 id="history-heading" className={`type-display ${styles.historyHeading}`} data-reveal-lines>
-          Founded by a man who refused to <em>sand away</em> his tool marks.
+          Two disciplines. <em>One table.</em>
         </h2>
         <div className={styles.historyBody}>
           <p className="type-body">
-            Jørgen Arv-Nielsen believed a piece of furniture should admit how it was made. His
-            tables kept their plane tracks and showed their wedged tenons like signatures.
-            Copenhagen called it unfinished. Then Copenhagen called it honest. Then Copenhagen
-            simply called it ARV.
+            Richard Lovell is an award-winning architect, trained to think about a room before he
+            thinks about a table. Tom Glover is a maker, more interested in how a joint will feel
+            in thirty years than how it photographs today. ARV is what happens when those two
+            instincts have to agree before anything gets built.
           </p>
           <p className="type-body">
-            Today his granddaughter Astrid runs the floor with six joiners. Every piece that
-            leaves Værkstedsvej is stamped with the year, the joiner&apos;s initials, and a number
-            in a ledger that now spans four shelves. When a piece changes hands — estate sales,
-            inheritances, the occasional divorce — we are often asked to re-oil it. We always say
-            yes. It is our furniture; you are only its current custodian.
+            Every piece starts as a drawing and ends on a bench in Sydney, shaped by the same two
+            hands that argued about the drawing. We ship worldwide, and we stand behind
+            everything that leaves the workshop — if a piece ever needs attention, get in touch
+            and we&apos;ll sort it.
           </p>
         </div>
 
@@ -130,13 +129,14 @@ export default function AboutPage() {
 
       <section id="workshop" className={`container ${styles.visit}`} aria-labelledby="visit-heading">
         <div>
-          <p className="type-eyebrow">Visit</p>
+          <p className="type-eyebrow">Get in touch</p>
           <h2 id="visit-heading" className={`type-display ${styles.visitHeading}`}>
-            The door is open on <em>Fridays.</em>
+            We ship further than <em>we can drive.</em>
           </h2>
           <p className={`type-body ${styles.visitBody}`}>
-            Værkstedsvej 14, Christianshavn. Come smell the linseed oil, argue about tables, and
-            see your commission on the bench. Coffee is black; opinions are free.
+            ARV is based in Sydney, but most conversations start with a photo and a floor plan,
+            not a workshop visit. Get in touch and we&apos;ll figure out what&apos;s possible —
+            wherever you are.
           </p>
         </div>
         <div className={styles.visitAction}>
