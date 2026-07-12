@@ -58,7 +58,7 @@ export default function AboutPage() {
       <div className={styles.workshopImage} data-parallax>
         <Image
           src="/site/about-workshop.jpg"
-          alt="Fresh wood shavings curling off a bench plane in the ARV workshop"
+          alt="An Otto pedestal table styled in a Copenhagen living room"
           width={1400}
           height={1750}
           sizes="100vw"
