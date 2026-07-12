@@ -18,12 +18,12 @@ test.describe("shopping flow", () => {
     await expect(drawer).toBeVisible();
     await expect(drawer).toContainText("Iggy Oval Dining Table");
     await expect(drawer).toContainText("Smoked Oak / 200 cm");
-    // 29800 base + 2400 smoked oak
-    await expect(drawer).toContainText("32.200");
+    // 5890 base + 450 smoked oak
+    await expect(drawer).toContainText("$6,340");
 
     // quantity up, subtotal doubles
     await drawer.getByRole("button", { name: /Increase quantity/ }).click();
-    await expect(drawer).toContainText("64.400");
+    await expect(drawer).toContainText("$12,680");
   });
 
   test("cart persists across a reload", async ({ page }) => {

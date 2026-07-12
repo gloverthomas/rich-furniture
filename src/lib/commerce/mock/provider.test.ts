@@ -38,8 +38,8 @@ describe("MockProvider catalog", () => {
     const base = product!.variants.find((v) => v.title === "Natural Oil / 200 cm");
     const smokedLong = product!.variants.find((v) => v.title === "Smoked Oak / 240 cm");
 
-    expect(Number(base!.price.amount)).toBe(29800);
-    expect(Number(smokedLong!.price.amount)).toBe(29800 + 2400 + 4800);
+    expect(Number(base!.price.amount)).toBe(5890);
+    expect(Number(smokedLong!.price.amount)).toBe(5890 + 450 + 950);
   });
 
   test("price range spans min and max variant prices", async () => {

@@ -44,7 +44,9 @@ export default function RootLayout({
         <CartProvider>
           <SmoothScroll>
             <Header />
-            <main id="main">{children}</main>
+            <div className="content-shrink" data-shrink-wrap>
+              <main id="main">{children}</main>
+            </div>
             <Footer />
           </SmoothScroll>
           <CartDrawer />

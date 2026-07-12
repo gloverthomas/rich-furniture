@@ -6,7 +6,7 @@ function formatterFor(currencyCode: string): Intl.NumberFormat {
   const cached = formatters.get(currencyCode);
   if (cached) return cached;
 
-  const formatter = new Intl.NumberFormat("da-DK", {
+  const formatter = new Intl.NumberFormat("en-AU", {
     style: "currency",
     currency: currencyCode,
     maximumFractionDigits: 0,

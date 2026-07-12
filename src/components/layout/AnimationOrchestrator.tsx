@@ -15,6 +15,7 @@ import { DURATION, EASE, LINE_OFFSET, STAGGER } from "@/lib/animation";
  *   [data-reveal-lines]   SplitText masked line reveal
  *   [data-parallax]       slow image drift while scrolling past
  *   [data-craft-chapter]  crossfades the matching [data-craft-visual]
+ *   [data-shrink-wrap]    pins and shrinks as [data-site-footer] rises beneath it
  *
  * Everything is skipped under prefers-reduced-motion; the DOM renders
  * fully visible without JS, so there is nothing to unhide.
@@ -27,6 +28,7 @@ export function AnimationOrchestrator() {
 
     let revert: (() => void) | undefined;
     let cancelled = false;
+    let shrinkWrapEl: HTMLElement | null = null;
 
     (async () => {
       const [{ gsap }, { ScrollTrigger }, { SplitText }] = await Promise.all([
@@ -152,6 +154,35 @@ export function AnimationOrchestrator() {
           });
         }
 
+        // --- Footer reveal: footer is a plain sibling right after the shrink wrap,
+        // so it naturally appears in flow as the wrap scrolls past. GSAP just adds
+        // the decorative scale + rounded-corner treatment over the last viewport
+        // height of that scroll, timed to the wrap's own (non-sticky) bottom edge ---
+        const shrinkWrap = document.querySelector<HTMLElement>("[data-shrink-wrap]");
+        const footer = document.querySelector<HTMLElement>("[data-site-footer]");
+        if (shrinkWrap && footer) {
+          shrinkWrapEl = shrinkWrap;
+          gsap.to(shrinkWrap, {
+            scale: 0.9,
+            ease: "none",
+            scrollTrigger: {
+              trigger: shrinkWrap,
+              // start well before the wrap's bottom actually reaches the viewport —
+              // scaling shrinks the wrap's own height, so its visible remnant
+              // otherwise disappears before the animation would read as "complete"
+              start: "bottom bottom+=600",
+              end: "bottom top",
+              scrub: true,
+              onUpdate: (self) => {
+                shrinkWrap.style.clipPath = `inset(0px round ${self.progress * 40}px)`;
+              },
+              onLeaveBack: () => {
+                shrinkWrap.style.clipPath = "";
+              },
+            },
+          });
+        }
+
         // --- Header: solid after the fold, hides down, returns up ---
         const header = document.querySelector<HTMLElement>("[data-site-header]");
         if (header) {
@@ -172,7 +203,10 @@ export function AnimationOrchestrator() {
         }
       });
 
-      revert = () => ctx.revert();
+      revert = () => {
+        ctx.revert();
+        if (shrinkWrapEl) shrinkWrapEl.style.clipPath = "";
+      };
     })();
 
     return () => {

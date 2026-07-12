@@ -140,6 +140,21 @@ ol[role="list"] {
   will-change: transform;
 }
 
+/* Footer reveal: main content is pinned and scaled down as the footer
+   scrolls up from beneath it (see AnimationOrchestrator). Static and
+   unscaled without JS / under reduced motion — footer just follows in
+   normal flow. */
+.content-shrink {
+  position: relative;
+  z-index: 1;
+  background: var(--color-surface);
+  transform-origin: center top;
+  will-change: transform, border-radius, filter;
+  /* box-shadow is clipped away entirely by clip-path; drop-shadow follows
+     the clipped shape instead, so it stays visible once rounded */
+  filter: drop-shadow(0 30px 70px oklch(23% 0.012 65 / 0.22));
+}
+
 /* Route transition: ink veil sweeps up, content rises beneath it.
    Lives in a route template so it replays on every navigation. */
 .page-veil {
