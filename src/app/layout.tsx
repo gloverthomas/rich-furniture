@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Instrument_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CartProvider } from "@/components/cart/CartContext";
@@ -71,6 +72,7 @@ export default function RootLayout({
           <CartDrawer />
           <AnimationOrchestrator />
         </CartProvider>
+        <Analytics />
       </body>
     </html>
   );
