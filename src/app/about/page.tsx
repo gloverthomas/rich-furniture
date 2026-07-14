@@ -146,9 +146,7 @@ export default function AboutPage() {
           </p>
         </div>
         <div className={styles.visitAction}>
-          <Button href="/collection" variant="outline">
-            Browse the collection
-          </Button>
+          <Button href="/bespoke">Start an enquiry</Button>
         </div>
       </section>
     </div>

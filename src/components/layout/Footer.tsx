@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SignupForm } from "@/components/forms/SignupForm";
 import styles from "./footer.module.css";
 
 const FOOTER_COLUMNS = [
@@ -24,7 +25,7 @@ const FOOTER_COLUMNS = [
 
 const FEATURE_LINKS = [
   { href: "/collection", label: "See our tables" },
-  { href: "/about#workshop", label: "Commission your own" },
+  { href: "/bespoke", label: "Commission your own" },
 ] as const;
 
 export function Footer() {
@@ -67,6 +68,9 @@ export function Footer() {
             <br />
             Shipping worldwide
           </p>
+          <div className={styles.signup}>
+            <SignupForm />
+          </div>
         </div>
 
         <div className={styles.columns}>

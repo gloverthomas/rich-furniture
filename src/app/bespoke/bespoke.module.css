@@ -1,0 +1,80 @@
+.page {
+  padding-top: calc(var(--space-xl) + 4rem);
+  padding-bottom: var(--space-section);
+}
+
+.hero {
+  display: grid;
+  gap: var(--space-md);
+  padding-bottom: var(--space-xl);
+}
+
+.heading {
+  max-width: 12ch;
+}
+
+.lede {
+  max-width: 46ch;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.formColumn {
+  padding-top: var(--space-md);
+}
+
+.aside {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.asideImage {
+  overflow: clip;
+  background: var(--color-surface-sunken);
+}
+
+.asideImage img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.process {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.step {
+  display: grid;
+  gap: var(--space-2xs);
+  border-top: 1px solid var(--color-line);
+  padding-top: var(--space-md);
+}
+
+.stepIndex {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-line-strong);
+}
+
+.stepBody {
+  margin-top: var(--space-2xs);
+  color: var(--color-text-secondary);
+  max-width: 38ch;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* Form first on mobile; supporting content follows */
+  .aside {
+    order: 1;
+  }
+}

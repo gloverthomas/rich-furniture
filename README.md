@@ -44,11 +44,16 @@ npx playwright test e2e/screenshots.spec.ts  # screenshots at 320/768/1024/1440 
   fully disabled under `prefers-reduced-motion`. Pages render complete
   without JavaScript.
 - Route transitions are a CSS-only ink veil in `src/app/template.tsx`.
+- The bespoke enquiry form (`/bespoke`) and footer signup send via Resend
+  (`src/lib/email.ts`). Without `RESEND_API_KEY` both simulate success in
+  development and return 503 in production — see `.env.example`.
 
 ## Going live checklist
 
 1. Create a Shopify store + Storefront API access token.
 2. Implement `ShopifyProvider` against `src/lib/commerce/provider.ts`.
-3. Replace the remaining Unsplash site imagery (`public/site/`) with brand
+3. Set the Resend env vars from `.env.example` in Vercel (API key, studio
+   inbox, verified sender, audience id) so enquiries and signups go live.
+4. Replace the remaining Unsplash site imagery (`public/site/`) with brand
    photography — product images are already the real catalogue.
-4. `vercel deploy` — no config needed.
+5. `vercel deploy` — no config needed.
